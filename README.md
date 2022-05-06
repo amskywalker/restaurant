@@ -24,3 +24,16 @@ This is an internship test project
 7. Run `sail up`
 8. Run `sail artisan migrate`
 9. Open `http://0.0.0.0`
+
+
+## Illustrative Logo
+
+Lamp Post SVG Vector from https://www.svgrepo.com/svg/21369/lamp-post
+
+Restaurant Store SVG Vector from https://www.svgrepo.com/svg/244506/restaurant-store
+
+Made in figma
+
+Font - Poppins
+
+Based in company logo
