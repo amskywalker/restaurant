@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SeatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::prefix('product')
     ->name('product.')
     ->controller(ProductController::class)
     ->group(function () {
         Route::put('/{product}/update', 'update')->name('update');
     });
+
+Route::prefix('seats')
+    ->name('seat.')
+    ->controller(SeatController::class)
+    ->group(function(){
+        Route::get('/', 'index')->name('index');
+    });
+
+Route::redirect('/', '/seats');
