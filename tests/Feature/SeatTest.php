@@ -16,7 +16,19 @@ class SeatTest extends TestCase
     {
         $seat = Seat::factory()->create();
 
-        $response = $this->get('/seats');
+        $response = $this->get('/seat');
+
+        $response->assertSee($seat->name);
+    }
+
+    /**
+     * @test
+     */
+    public function should_see_an_order_for_a_seat_and_create_if_have_not_order()
+    {
+        $seat = Seat::factory()->create();
+
+        $response = $this->get("seat/{$seat->id}/order");
 
         $response->assertSee($seat->name);
     }
