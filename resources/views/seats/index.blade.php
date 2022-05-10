@@ -46,7 +46,7 @@
                         </table>
                     </div>
                 </div>
-
+                {{-- TODO I have to open the order to see the other orders...--}}
             </div>
         </div>
     </div>
