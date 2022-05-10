@@ -23,7 +23,8 @@ This is an internship test project
 6. Run `sail build`
 7. Run `sail up`
 8. Run `sail artisan migrate`
-9. Open `http://0.0.0.0`
+9. Run `sail npm install && npm run dev`
+10. Open `http://0.0.0.0` or `localhost`
 
 
 ## Illustrative Logo
