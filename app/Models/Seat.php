@@ -25,4 +25,11 @@ class Seat extends Model
             ->where('active', true)
             ->latest();
     }
+
+    public function orders_inactive(): HasMany
+    {
+        return $this->hasMany(Order::class)
+            ->where('active', false)
+            ->latest();
+    }
 }

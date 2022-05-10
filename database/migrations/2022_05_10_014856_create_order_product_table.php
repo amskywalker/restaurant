@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('order_product', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('seat_id')->constrained();
-            $table->boolean('active')->default(true);
-            $table->integer('persons_quantity')->default(0);
-            $table->enum('payment_method', ['Pix', 'Dinheiro', 'Credito', 'Debito'])->default('Pix');
+            $table->foreignId('order_id')->constrained();
+            $table->foreignId('product_id')->constrained();
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('order_product');
     }
 };

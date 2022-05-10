@@ -15,6 +15,10 @@ class SeatSeeder extends Seeder
      */
     public function run()
     {
-        Seat::factory()->count(5)->create();
+        for ($i = 1; $i < 6; $i++) {
+            Seat::factory()->create([
+                'name' => 'Mesa 0' . $i
+            ]);
+        }
     }
 }

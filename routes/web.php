@@ -28,14 +28,17 @@ Route::prefix('seat')
     ->controller(SeatController::class)
     ->group(function(){
         Route::get('/', 'index')->name('index');
-        Route::get('/{seat}/order', 'show')->name('show');
+        Route::get('/{seat}/order/{order?}', 'show')->name('show');
     });
 
 Route::prefix('order')
     ->name('order.')
     ->controller(OrderController::class)
     ->group(function (){
-        Route::post('/store', 'store');
+        Route::post('/store', 'store')->name('store');
+        Route::put('/{order}/update', 'update')->name('update');
+        Route::delete('/{order}/close', 'close')->name('close');
+        Route::delete('/{order}/product/{product}/delete', 'product_delete')->name('product.delete');
     });
 
 Route::redirect('/', '/seat');
