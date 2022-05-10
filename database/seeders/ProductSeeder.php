@@ -15,6 +15,24 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        Product::factory()->count(5)->create();
+        Product::factory()->create([
+            'name' => 'Água'
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Cerveja'
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Refrigerante'
+        ]);
+
+        Product::factory()->create([
+            'name' => 'PF'
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Brigadeiro'
+        ]);
     }
 }

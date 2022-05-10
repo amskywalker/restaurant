@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('seat_id')->constrained();
             $table->boolean('active')->default(true);
+            $table->integer('persons_quantity')->default(0);
+            $table->enum('payment_method', ['Pix', 'Dinheiro', 'Credito', 'Debito'])->default('Pix');
             $table->timestamps();
         });
     }

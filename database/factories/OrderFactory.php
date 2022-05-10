@@ -24,7 +24,7 @@ class OrderFactory extends Factory
     {
         return [
             'seat_id' => 1,
-            'active' => true
+            'active' => false
         ];
     }
 }
