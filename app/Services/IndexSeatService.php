@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Collection;
 class IndexSeatService
 {
 
-    public function run(): Collection
+    public function run(array $relationships = []): Collection
     {
         $seat = new Seat();
-        return $seat->all();
+        return $seat->with($relationships)->get();
     }
 }
