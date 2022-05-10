@@ -10,7 +10,7 @@ This is an internship test project
 4. Run `cp .env.example .env`
 5. Setup database config in .env file
 6. Run `php artisan key:generate`
-7. Run `php artisan migrate`
+7. Run `php artisan migrate --seed`
 8. Run `php artisan serve`
 9. Open `http://127.0.0.1:8000`
 
@@ -22,7 +22,7 @@ This is an internship test project
 5. Run `php artisan sail:install`
 6. Run `sail build`
 7. Run `sail up`
-8. Run `sail artisan migrate`
+8. Run `sail artisan migrate --seed`
 9. Run `sail npm install && npm run dev`
 10. Open `http://0.0.0.0` or `localhost`
 
