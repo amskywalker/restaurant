@@ -12,7 +12,8 @@ This is an internship test project
 6. Run `php artisan key:generate`
 7. Run `php artisan migrate --seed`
 8. Run `php artisan serve`
-9. Open `http://127.0.0.1:8000`
+9. Run `npm install && npm run dev`
+10. Open `http://127.0.0.1:8000`
 
 ### Docker - Sail
 1. Clone this repository using `git clone https://github.com/amskywalker/restaurant.git`
